@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://macgnarly.github.io/fiduciary-accounting-pro/sitemap.xml

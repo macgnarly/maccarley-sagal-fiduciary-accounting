@@ -1,0 +1,8 @@
+# Local tooling config, not part of the deployed site
+.claude/
+
+# Research/reference inputs used during design, not site deliverables
+CLAUDEwebdesign.md.txt
+WEBSITE TEXT.txt
+quinn body code.txt
+quinngtl.com-*.jpeg
