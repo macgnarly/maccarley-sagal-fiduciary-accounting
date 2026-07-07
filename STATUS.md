@@ -1,6 +1,6 @@
 # Project Status
 
-Marketing site for a fiduciary accounting practice. Placeholder name: **Fiduciary Accounting Pro** (real name TBD).
+Marketing site for a fiduciary accounting practice: **MacCarley & Sagal Fiduciary Accounting**.
 
 ## Stack
 
@@ -22,9 +22,11 @@ Design direction: editorial/trustworthy, blue-led palette (navy/ledger blue/sky/
 - Scroll-triggered fade-in animations throughout (respects `prefers-reduced-motion`)
 - Mobile nav menu (working toggle)
 - All em dashes removed from copy per user preference
-- Pushed to GitHub: `macgnarly/fiduciary-accounting-pro` (public), GitHub Pages enabled, deploying from `main` on every push
-  - Live at `https://macgnarly.github.io/fiduciary-accounting-pro/`
+- Pushed to GitHub: `macgnarly/maccarley-sagal-fiduciary-accounting` (public), GitHub Pages enabled, deploying from `main` on every push
+  - Live at `https://macgnarly.github.io/maccarley-sagal-fiduciary-accounting/`
 - Favicon (`favicon.svg`), theme-color, Open Graph + Twitter Card meta tags on both pages, `robots.txt`, `sitemap.xml`
+- Rebranded from placeholder "Fiduciary Accounting Pro" to **MacCarley & Sagal Fiduciary Accounting** (nav, footer, titles, meta tags, copyright)
+- Repo renamed from `fiduciary-accounting-pro` to `maccarley-sagal-fiduciary-accounting` to match; all baked-in URLs (`sitemap.xml`, `robots.txt`, OG/Twitter meta tags) updated to the new Pages URL
 
 ## To Do
 
@@ -36,7 +38,7 @@ Design direction: editorial/trustworthy, blue-led palette (navy/ledger blue/sky/
 - [ ] Test end-to-end that an inquiry actually lands in an inbox
 
 ### 2. Real content still needed
-- [ ] Firm name (site currently uses placeholder "Fiduciary Accounting Pro" everywhere)
+- [x] ~~Firm name~~ — now MacCarley & Sagal Fiduciary Accounting
 - [ ] Real email / phone number (footer + contact section currently use placeholders)
 - [ ] Real domain name — if one is bought, point it at Pages (CNAME) and update the URLs baked into `sitemap.xml`, `robots.txt`, and the OG/Twitter meta tags in both HTML files (currently pointing at the `github.io` URL)
 - [ ] Confirm the 8-years / CA+WI / non-CPA facts stay accurate at launch time

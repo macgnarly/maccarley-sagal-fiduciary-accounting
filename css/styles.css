@@ -1,5 +1,5 @@
 /* ============================================================
-   Fiduciary Accounting Pro — Design Tokens
+   MacCarley & Sagal Fiduciary Accounting — Design Tokens
    ============================================================ */
 :root{
   /* Color: blue-led, editorial trust palette */
@@ -675,7 +675,6 @@ h1, h2, h3{
 }
 
 @media (min-width: 1024px){
-  .brand-break{ display: inline; }
   .section{ padding: 120px 0; }
 }
 
