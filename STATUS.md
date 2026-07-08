@@ -16,7 +16,8 @@ Design direction: editorial/trustworthy, blue-led palette (navy/ledger blue/sky/
 
 ## Done
 
-- Full homepage: hero, services list, about (with real facts: 8 years, non-CPA firm, CA + WI), 10-step process timeline, contact section
+- Full homepage: hero, services list, about (with real facts: non-CPA firm, CA + WI, co-founder's 9 years of hands-on experience), team bios (Aaron MacCarley, Boris Sagal), 10-step process timeline, contact section
+- Firm is newly founded — copy is careful to attribute the "9 years" / "10 years" experience to the co-founders individually (Aaron since 2017, Boris's decade as a paralegal), not to the firm's operating history
 - FAQ page, content adapted from a competitor's FAQ page, linked in header + footer nav
 - Responsive at 375 / 768 / 1024 / 1440
 - Scroll-triggered fade-in animations throughout (respects `prefers-reduced-motion`)
@@ -41,7 +42,8 @@ Design direction: editorial/trustworthy, blue-led palette (navy/ledger blue/sky/
 - [x] ~~Firm name~~ — now MacCarley & Sagal Fiduciary Accounting
 - [ ] Real email / phone number (footer + contact section currently use placeholders)
 - [ ] Real domain name — if one is bought, point it at Pages (CNAME) and update the URLs baked into `sitemap.xml`, `robots.txt`, and the OG/Twitter meta tags in both HTML files (currently pointing at the `github.io` URL)
-- [ ] Confirm the 8-years / CA+WI / non-CPA facts stay accurate at launch time
+- [ ] Confirm the 9-years (Aaron) / 10-years (Boris) / CA+WI / non-CPA facts stay accurate at launch time
+- [ ] Decide if/when team photos should replace the initials-circle placeholders in the About team section
 
 ### 3. Remaining nice-to-haves
 - [ ] Open Graph share image (`og:image`) — skipped for now since there's no logo/name/branding finalized yet to put on one; add once real branding lands

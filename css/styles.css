@@ -381,6 +381,56 @@ h1, h2, h3{
   max-width: 34ch;
 }
 
+.team{
+  grid-column: 1 / -1;
+  padding: 48px 24px 0;
+  margin-top: 16px;
+  border-top: 1px solid var(--line-warm);
+}
+.team-head{ max-width: 640px; }
+.team-title{
+  font-size: clamp(1.2rem, 1vw + 1rem, 1.5rem);
+  margin-top: 12px;
+  max-width: 32ch;
+}
+.team-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+.team-member:nth-child(1) .team-avatar{ background: var(--ledger-blue); }
+.team-member:nth-child(2) .team-avatar{ background: var(--brass); }
+.team-avatar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--paper);
+  margin-bottom: 18px;
+}
+.team-name{ font-size: 1.2rem; margin: 0 0 2px; }
+.team-role{
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ledger-blue);
+  margin: 0 0 12px;
+}
+.team-member:nth-child(2) .team-role{ color: var(--brass); }
+.team-bio{
+  margin: 0;
+  color: var(--muted-warm);
+  font-size: 0.95rem;
+  max-width: 42ch;
+}
+
 /* ============================================================
    Process (timeline)
    ============================================================ */
@@ -652,6 +702,7 @@ h1, h2, h3{
    ============================================================ */
 @media (min-width: 640px){
   .about-visual, .about-copy{ padding: 0 40px; }
+  .team{ padding-left: 40px; padding-right: 40px; }
 }
 
 @media (min-width: 768px){
@@ -663,6 +714,7 @@ h1, h2, h3{
     padding-bottom: 96px;
   }
   .about{ grid-template-columns: 1fr 1fr; }
+  .team-grid{ grid-template-columns: 1fr 1fr; gap: 56px; }
   .timeline{ max-width: 780px; }
   .timeline-item{ grid-template-columns: 52px 1fr; column-gap: 32px; padding-bottom: 52px; }
   .timeline-node{ width: 52px; height: 52px; font-size: 0.85rem; }
