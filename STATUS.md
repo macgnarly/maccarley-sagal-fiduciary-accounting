@@ -24,10 +24,11 @@ Design direction: editorial/trustworthy, blue-led palette (navy/ledger blue/sky/
 - Mobile nav menu (working toggle)
 - All em dashes removed from copy per user preference
 - Pushed to GitHub: `macgnarly/maccarley-sagal-fiduciary-accounting` (public), GitHub Pages enabled, deploying from `main` on every push
-  - Live at `https://macgnarly.github.io/maccarley-sagal-fiduciary-accounting/`
 - Favicon (`favicon.svg`), theme-color, Open Graph + Twitter Card meta tags on both pages, `robots.txt`, `sitemap.xml`
 - Rebranded from placeholder "Fiduciary Accounting Pro" to **MacCarley & Sagal Fiduciary Accounting** (nav, footer, titles, meta tags, copyright)
-- Repo renamed from `fiduciary-accounting-pro` to `maccarley-sagal-fiduciary-accounting` to match; all baked-in URLs (`sitemap.xml`, `robots.txt`, OG/Twitter meta tags) updated to the new Pages URL
+- Repo renamed from `fiduciary-accounting-pro` to `maccarley-sagal-fiduciary-accounting` to match
+- Custom domain connected: **macsagal.com** — `CNAME` file added, GitHub Pages custom domain set, DNS (4 apex A records + `www` CNAME) configured at Porkbun, and all baked-in URLs (`sitemap.xml`, `robots.txt`, OG/Twitter meta tags) updated to `https://macsagal.com/`
+  - Live at `https://macsagal.com/` (may take a bit for DNS to fully propagate and for GitHub to issue the HTTPS certificate)
 
 ## To Do
 
@@ -41,7 +42,7 @@ Design direction: editorial/trustworthy, blue-led palette (navy/ledger blue/sky/
 ### 2. Real content still needed
 - [x] ~~Firm name~~ — now MacCarley & Sagal Fiduciary Accounting
 - [ ] Real email / phone number (footer + contact section currently use placeholders)
-- [ ] Real domain name — if one is bought, point it at Pages (CNAME) and update the URLs baked into `sitemap.xml`, `robots.txt`, and the OG/Twitter meta tags in both HTML files (currently pointing at the `github.io` URL)
+- [x] ~~Real domain name~~ — macsagal.com connected
 - [ ] Confirm the 9-years (Aaron) / 10-years (Boris) / CA+WI / non-CPA facts stay accurate at launch time
 - [ ] Decide if/when team photos should replace the initials-circle placeholders in the About team section
 

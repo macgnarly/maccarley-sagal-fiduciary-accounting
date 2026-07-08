@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://macgnarly.github.io/maccarley-sagal-fiduciary-accounting/sitemap.xml
+Sitemap: https://macsagal.com/sitemap.xml
