@@ -347,6 +347,8 @@ h1, h2, h3{
   gap: 56px;
   align-items: center;
 }
+.about-head{ grid-column: 1 / -1; margin-bottom: 8px; }
+.about-headline{ max-width: none; font-size: clamp(1.85rem, 4.6vw - 0.3rem, 2.9rem); }
 .about-visual{ padding: 0 24px; }
 .ledger-art{ width: 100%; height: auto; }
 .ledger-bg{ fill: var(--paper); }
@@ -434,7 +436,8 @@ h1, h2, h3{
 /* ============================================================
    Process (timeline)
    ============================================================ */
-.process-head{ max-width: 640px; margin-bottom: 56px; }
+.process-head{ margin-bottom: 56px; }
+.process-head .section-headline{ max-width: none; }
 .process-intro{ margin-top: 18px; }
 
 .timeline{
@@ -629,7 +632,7 @@ h1, h2, h3{
    ============================================================ */
 .faq-hero{ padding-bottom: 64px; }
 .faq-hero .lede-light{ margin: 0; }
-.faq-hero .section-headline{ margin: 16px 0; max-width: 20ch; }
+.faq-hero .section-headline{ margin: 16px 0; max-width: none; }
 
 .faq-list{
   max-width: 820px;

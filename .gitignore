@@ -1,5 +1,6 @@
 # Local tooling config, not part of the deployed site
 .claude/
+.playwright-cli/
 
 # Research/reference inputs used during design, not site deliverables
 CLAUDEwebdesign.md.txt
