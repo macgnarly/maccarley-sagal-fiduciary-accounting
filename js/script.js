@@ -59,18 +59,56 @@
     revealTargets.forEach(revealNow);
   }
 
-  // Contact form (front-end only demo)
+  // Contact form (submits to Formspree)
   var form = document.getElementById("contactForm");
   var note = document.getElementById("formNote");
   if (form && note) {
+    var submitBtn = form.querySelector("button[type='submit']");
+    var submitBtnDefaultHTML = submitBtn ? submitBtn.innerHTML : "";
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-      note.textContent = "Thank you. We'll be in touch within one business day.";
-      form.reset();
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+      }
+      note.textContent = "";
+      note.classList.remove("form-note--error");
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            note.textContent = "Thank you. We'll be in touch within one business day.";
+            form.reset();
+          } else {
+            return response.json().then(function (data) {
+              var message =
+                data && data.errors && data.errors.length
+                  ? data.errors.map(function (err) { return err.message; }).join(", ")
+                  : "Something went wrong. Please try again or email us directly.";
+              throw new Error(message);
+            });
+          }
+        })
+        .catch(function (error) {
+          note.classList.add("form-note--error");
+          note.textContent = error.message || "Something went wrong. Please try again or email us directly.";
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = submitBtnDefaultHTML;
+          }
+        });
     });
   }
 })();

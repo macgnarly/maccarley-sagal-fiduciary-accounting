@@ -29,24 +29,18 @@ Design direction: editorial/trustworthy, blue-led palette (navy/ledger blue/sky/
 - Repo renamed from `fiduciary-accounting-pro` to `maccarley-sagal-fiduciary-accounting` to match
 - Custom domain connected: **macsagal.com** — `CNAME` file added, GitHub Pages custom domain set, DNS (4 apex A records + `www` CNAME) configured at Porkbun, and all baked-in URLs (`sitemap.xml`, `robots.txt`, OG/Twitter meta tags) updated to `https://macsagal.com/`
   - Live at `https://macsagal.com/` (may take a bit for DNS to fully propagate and for GitHub to issue the HTTPS certificate)
+- Contact form wired up to Formspree (`https://formspree.io/f/mykqqzzz`). `script.js` now does a real `fetch()` submit with a working success state, a real error state (shows Formspree's returned error message), and a disabled "Sending..." state on the button while in flight. Verified with mocked success/error responses via Playwright since a real submission wasn't sent during testing.
 
 ## To Do
 
-### 1. Contact form — needs a form-as-a-service backend
-`js/script.js` currently only shows a fake "thank you" message on submit. It does not send the inquiry anywhere. Before launch, wire it up:
-- [ ] Pick a provider (Formspree, Getform, Web3Forms, etc. — all have free tiers and work fine on GitHub Pages)
-- [ ] Point the `<form id="contactForm">` at the provider's endpoint (`action` + `method`, or their JS snippet)
-- [ ] Update the submit handler in `js/script.js` to actually await the request before showing the success message, and show a real error state if it fails
-- [ ] Test end-to-end that an inquiry actually lands in an inbox
-
-### 2. Real content still needed
+### 1. Real content still needed
 - [x] ~~Firm name~~ — now MacCarley & Sagal Fiduciary Accounting
 - [ ] Real email / phone number (footer + contact section currently use placeholders)
 - [x] ~~Real domain name~~ — macsagal.com connected
 - [ ] Confirm the 9-years (Aaron) / 10-years (Boris) / CA+WI / non-CPA facts stay accurate at launch time
 - [ ] Decide if/when team photos should replace the initials-circle placeholders in the About team section
 
-### 3. Remaining nice-to-haves
+### 2. Remaining nice-to-haves
 - [ ] Open Graph share image (`og:image`) — skipped for now since there's no logo/name/branding finalized yet to put on one; add once real branding lands
 - [ ] Analytics (GA4, Plausible, etc.) — not wired up; add once an account/provider is chosen
 - [ ] Multi-size PNG/ICO favicon set + `apple-touch-icon` for older browsers and iOS home-screen icons (current favicon is SVG-only, which modern evergreen browsers render fine)
