@@ -8,6 +8,7 @@ Static site. No build step, no framework, no dependencies.
 
 - `index.html` — homepage (hero, services, about, 10-step process, contact)
 - `faq.html` — FAQ page (native `<details>` accordion)
+- `privacy.html`, `terms.html` — legal pages, linked from the footer on every page
 - `css/styles.css` — design tokens + all styles
 - `js/script.js` — mobile nav toggle, scroll-reveal animations, contact form handler
 - Fonts loaded from Google Fonts CDN (Fraunces, Inter Tight, IBM Plex Mono)
@@ -30,6 +31,8 @@ Design direction: editorial/trustworthy, blue-led palette (navy/ledger blue/sky/
 - Custom domain connected: **macsagal.com** — `CNAME` file added, GitHub Pages custom domain set, DNS (4 apex A records + `www` CNAME) configured at Porkbun, and all baked-in URLs (`sitemap.xml`, `robots.txt`, OG/Twitter meta tags) updated to `https://macsagal.com/`
   - Live at `https://macsagal.com/` (may take a bit for DNS to fully propagate and for GitHub to issue the HTTPS certificate)
 - Contact form wired up to Formspree (`https://formspree.io/f/mykqqzzz`). `script.js` now does a real `fetch()` submit with a working success state, a real error state (shows Formspree's returned error message), and a disabled "Sending..." state on the button while in flight. Verified with mocked success/error responses via Playwright since a real submission wasn't sent during testing.
+- Privacy Policy and Terms & Conditions pages added, modeled after fasllc.com's structure but rewritten to describe what this site actually does (Formspree-processed contact form, no cookies/analytics, GitHub Pages + Google Fonts hosting). Linked from the footer on all pages, added to `sitemap.xml`.
+  - **Not legal advice / not attorney-reviewed** — these are reasonable drafts for a small firm's marketing site, but should get a real legal review before being relied on, especially given the fiduciary/legal-adjacent subject matter.
 
 ## To Do
 
