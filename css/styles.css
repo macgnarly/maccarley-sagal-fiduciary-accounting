@@ -272,9 +272,10 @@ h1, h2, h3{
   padding-bottom: 40px;
 }
 .hero-headline{
-  font-size: clamp(2.4rem, 6vw + 1rem, 4.6rem);
+  font-size: clamp(2rem, 4.6vw + 0.8rem, 3.6rem);
   color: var(--paper);
 }
+.hero-copy .eyebrow{ font-size: 1rem; }
 .hero-aside{
   display: flex;
   flex-direction: column;
